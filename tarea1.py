@@ -7,6 +7,8 @@ lo contrario False. A partir de lo anterior, si se tiene una matriz mat como sig
 
 
 def verificarDiagonales(mat):
+
+
     ndiag1 = []
     ndiag2 = []
     # Encontrar Diagonal 1
@@ -32,12 +34,15 @@ siguiente:"""
 
 
 def esCapicua(list):
+
+
     rlist = list[::-1]
     for i in range(len(list)):
         if list[i] != rlist[i]:
             return False
         else:
             return True
+
 
 # Pregunta 3
 # Parte A
@@ -48,6 +53,45 @@ tiene en común con la segunda lista. A partir de lo anterior, si se consideran 
 dos listas"""
 
 
-def diferenciarListas(listA, listaB):
-    listaA = [40, 10, 22, 12, 33, 33, 33]
-    listaB = [41, 22, 31, 15, 13, 12, 33, 19]
+def diferenciarListas(listaA, listaB):
+
+
+    diflist = []
+    for i in listaA:
+        if i not in listaB:
+            diflist.append(i)
+
+    print(diflist)
+
+#Pregunta 4
+"""Escriba la definición de la operación mostrarPrimos que reciba como parámetro
+un valor N y muestre los números primos desde 1 hasta N. En adición a esto, esta operación
+debe también mostrar entre esos números primos cuáles tienen la particularidad de que la suma
+de sus dígitos también da un número primo. Los resultados deben ser imprimidos siguiendo el
+formato que se indica a continuación."""
+
+
+def mostrarPrimos(n):
+
+    total = 0
+    dlist = []
+    numero = 0
+    while numero <= n:
+        cont = 1
+        x = 0
+        while cont <= numero:
+            if numero % cont == 0:
+                x += 1
+            cont += 1
+        if x == 2:
+            print("--> ", numero, ",")
+
+        for i in str(numero):
+            dlist.append(int(i))
+
+        print(dlist)
+
+        numero += 1
+
+
+mostrarPrimos(100)
