@@ -49,4 +49,5 @@ dos listas"""
 
 
 def diferenciarListas(listA, listaB):
-    
+    listaA = [40, 10, 22, 12, 33, 33, 33]
+    listaB = [41, 22, 31, 15, 13, 12, 33, 19]
