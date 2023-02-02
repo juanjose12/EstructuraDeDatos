@@ -61,7 +61,6 @@ def diferenciarListas(listaA, listaB):
         if i not in listaB:
             diflist.append(i)
 
-    print(diflist)
 
 #Pregunta 4
 """Escriba la definición de la operación mostrarPrimos que reciba como parámetro
@@ -73,8 +72,6 @@ formato que se indica a continuación."""
 
 def mostrarPrimos(n):
 
-    total = 0
-    dlist = []
     numero = 0
     while numero <= n:
         cont = 1
@@ -84,14 +81,9 @@ def mostrarPrimos(n):
                 x += 1
             cont += 1
         if x == 2:
-            print("--> ", numero, ",")
-
-        for i in str(numero):
-            dlist.append(int(i))
-
-        print(dlist)
+            print("-->", numero, ",")
 
         numero += 1
 
 
-mostrarPrimos(100)
+print(mostrarPrimos(100))
