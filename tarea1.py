@@ -86,4 +86,4 @@ def mostrarPrimos(n):
         numero += 1
 
 
-print(mostrarPrimos(100))
+mostrarPrimos(100)
